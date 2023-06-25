@@ -1,0 +1,437 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+* {
+    margin: 0;
+  }
+ 
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+
+    background: url(assets/bg-main-mobile.png) top -200px left no-repeat;
+  }
+  
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+ 
+input, button, textarea, select {
+    font: inherit;
+  }
+  
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+#root, #__next {
+    isolation: isolate;
+  }
+
+/* Background Img */
+
+.tablet,
+.desktop {
+    display: none;
+}
+
+.top-bg {
+    display: none;
+}
+
+/* Top Logo */
+
+.logo {
+    margin: 2rem 0px 3rem 1.4rem;
+}
+
+
+/* Top Section */
+
+.main-text {
+    max-width: 800px;
+}
+
+.title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+
+    line-height: 1.2;
+    margin: 0 4rem 0 1.4rem;
+}
+
+.top-info {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+
+    margin: 1.4rem 20px 10rem 1.4rem;
+}
+
+/* Middle Section */
+
+.middle-section {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.dark-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    background-color: #191826;
+    background-image: url(assets/bg-pattern-2.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    border-radius: 12px;
+
+    width: 375px;
+    height: 600px;
+}
+
+.phone {
+    width: 209px;
+    height: 430px;
+
+    position: absolute;
+    bottom: 40%;
+}
+
+.orange-card {
+    background-color: #FA7453;
+    border-radius: 12px;
+
+    width: 375px;
+
+    position: absolute;
+    overflow: hidden;
+    top: 46%;
+}
+
+/* Hidden div to fill gap for the absolute */
+
+.hidden {
+    height: 320px;
+}
+
+/* Card Info */
+
+.card-info {
+    margin: 2.2rem 0 2.6rem 1.4rem;
+}
+
+.card-title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+
+    color: #FCFAF9;
+}
+
+.card-info p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.05rem;
+
+    color: #FCFAF9;
+
+    margin-top: 1rem;
+    padding-right: 2.5rem;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.price span {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+/* Buttons Section */
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.buttons a {
+    text-decoration: none;
+}
+
+.buttons:hover {
+    cursor: pointer;
+}
+
+.apple,
+.android {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    font-family: 'IBM Plex Sans', sans-serif;
+    width: 90%;
+    border-radius: 12px;
+
+    margin-right: 1.4rem;
+    padding: .8rem;
+}
+
+.apple {
+    background-color: #191826;
+}
+
+.apple:active {
+    background-color: #66E2DC;
+}
+
+.android {
+    background-color: #FCFAF9;
+}
+
+.android:active {
+    background-color: #FFB964;
+}
+
+.btn-ios {
+    color: #FCFAF9;
+}
+
+.btn-android {
+    color:#191826
+}
+
+/* Footer Section */
+
+.footer-logo {
+    margin-bottom: 30px;
+}
+
+.footer-info p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.05rem;
+
+    margin: 0 40px 60px 1.4rem;
+    max-width: 21em;
+}
+
+.footer-info span {
+    font-weight: bold;
+}
+
+/* Socials Section */
+
+.socials {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 3rem;
+}
+
+.socials a {
+    margin: 0 2px 0 1.4rem;
+}
+
+.socials a:active {
+    background-color: #FFB964;
+}
+
+@media only screen and (min-width: 410px) {
+    .dark-card,
+    .orange-card {
+        margin-left: 1.4rem;
+        margin-right: 1.4rem;
+        width: 440px;
+    }
+}
+
+@media only screen and (min-width: 650px) {
+
+    body {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        overflow-x: hidden;
+
+        background: url(assets/bg-main-tablet.png) top -200px right -100px no-repeat;
+    }
+
+    .top-bg {
+        display: block;
+
+        position: absolute;
+        top: -20px;
+        right: -40px;
+        width: 250px;
+    }
+
+    .main-text {
+        width: 480px; 
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .dark-card {
+        min-width: 700px;
+        height: 550px;
+
+        margin: 0 auto;
+    }
+
+    .phone {
+        width: 270px;
+        height: 556px;
+        position: absolute;
+        bottom: 15%;
+        left: 6%;
+    }
+
+    .orange-card {
+        width: 375px;
+    
+        top: 20%;
+        right: 16%;
+    }
+
+    .hidden {
+        height: 150px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-logo {
+        margin-top: 0;
+    }
+
+    .socials {
+        align-self: center;
+    }
+
+}
+
+@media only screen and (min-width: 900px) {
+
+    body {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+
+    .main-text {
+        width: 560px; 
+    }
+
+    .dark-card {
+        min-width: 850px;
+        height: 550px;
+
+        margin: 0 auto;
+    }
+
+    .footer-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 60px;
+    }
+
+    .footer-logo {
+        align-self: flex-start;
+    }
+
+    
+}
+
+@media only screen and (min-width: 1200px) {
+
+    body {
+        margin-left: 6rem;
+        margin-right: 6rem;
+
+        background: url(assets/bg-main-desktop.png) top -200px right -200px no-repeat;
+    }
+
+    .main-text {
+        width: 1110px; 
+    }
+
+    .title {
+        font-size: 5.5rem;
+        width: 1100px;
+        line-height: 1;
+    }
+
+    .top-info {
+        font-size: 1.1rem;
+        margin-top: 2rem;
+    }
+
+    .middle-section {
+        margin-top: 12rem;
+    }
+
+    .phone {
+        width: 312px;
+        height: 612px;
+        bottom: 13%;
+        left: 17%;
+    }
+
+    .dark-card {
+        min-width: 1200px;
+        height: 550px;
+
+        margin: 0 auto;
+    }
+
+    footer {
+        margin-top: 2rem;
+    }
+
+    .footer-info {
+        gap: 140px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    body {
+        margin-left: 8rem;
+        margin-right: 8rem;
+
+        background: url(assets/bg-main-desktop.png) top -200px right 200px no-repeat;
+    }
+
+    .dark-card {
+        min-width: 1600px;
+    }
+
+    .phone {
+        left: 25%;
+    }
+
+    .orange-card {
+        top: 20%;
+        right: 25%;
+    }
+}
